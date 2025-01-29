@@ -1,0 +1,11 @@
+# Ignore les fichiers de développement
+.git
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore les fichiers locaux
+.env
+node_modules
+media/
+staticfiles/

@@ -1,0 +1,43 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  DOCKER_IMAGE: registry.gitlab.com/your-repo/ornitools-frontend
+
+test:
+  stage: test
+  image: node:20
+  script:
+    - npm ci
+    - npm run lint
+    - npm run test
+  only:
+    - dev
+    - master
+
+build:
+  stage: build
+  image: node:20
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - .next
+  only:
+    - dev
+    - master
+
+deploy:
+  stage: deploy
+  image: docker:24.0
+  services:
+    - docker:dind
+  script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker build -t $DOCKER_IMAGE .
+    - docker push $DOCKER_IMAGE
+  only:
+    - main

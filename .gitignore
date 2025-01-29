@@ -1,0 +1,5 @@
+.env
+
+demo_*
+*.swp
+media
