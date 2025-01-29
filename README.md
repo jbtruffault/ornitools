@@ -1,37 +1,16 @@
-<a href="https://github.com/JonasTischer/django-next-template">
-  <img alt="Django Next.js Template" src="demo.gif">
-  <h1 align="center">Django NextJS JWT Template</h1>
-</a>
+# Ornitools
+A tool for uploading bird GPS position files and managing the visibility of the bird data.
+## Description
 
-<p align="center">
-  Jumpstart your full-stack development with Django, NextJS and JWT authentication!
-</p>
-
-<p align="center">
-  <a href="https://twitter.com/JonasTischer">
-    <img src="https://img.shields.io/twitter/follow/JonasTischer?style=flat&label=JonasTischer&logo=twitter&color=0bf&logoColor=fff" alt="Twitter follower count" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#installation"><strong>Installation</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
-  <a href="#author"><strong>Author</strong></a>
-</p>
-<br/>
-
-## Introduction
-
-This template combines Django 5 for the backend and Next.js 14 for the frontend. It includes JWT authentication on the backend and Shadcn UI components for the frontend. This setup helps you start building full-stack web applications more quickly.
+This project allows users to upload bird GPS position files, view their information, and decide whether the bird data will be public or private. It includes a Django backend and a React + Next.js frontend. The project is configured with Docker to simplify setup and deployment.
 
 ## Installation
 
 Clone & create this repo locally with the following command:
 
 ```bash
-git clone https://github.com/JonasTischer/django-next-template.git
-cd django-next-template
+git clone https://github.com/jbtruffault/ornitools.git
+cd ornitools
 ```
 
 ### Backend Setup
@@ -48,7 +27,7 @@ cd django-next-template
    poetry install
    ```
 
-3. Copy `.env` to `.env.local` and update the variables.
+3. Copy `.env-example` to `.env` and update the variables.
 
 4. Run migrations and start the Django server:
    ```sh
@@ -92,23 +71,16 @@ cd django-next-template
 - [Shadcn UI](https://ui.shadcn.com/) – Re-usable components built using Radix UI and Tailwind CSS
 - [Tanstack Query](https://tanstack.com/query/latest) – Powerful asynchronous state management for TS/JS
 - [React Hook Form](https://react-hook-form.com/) – Performant, flexible and extensible forms with easy-to-use validation
-- [Zod](https://github.com/colinhacks/zod) – TypeScript-first schema validation with static type inference
 
 ### Development and Deployment
 
 - [Docker](https://www.docker.com/) – Containerization platform for easy deployment and scaling
 - [PostgreSQL](https://www.postgresql.org/) – Powerful, open-source object-relational database system
 
-## Roadmap
-
-- [ ] Complete deployment configuration
-- [ ] Fully containerize with Docker and PostgreSQL
-- [ ] Add comprehensive testing suite
-- [ ] Implement CI/CD pipeline
 
 ## Author
 
-Created by Jonas Tischer in 2024.
+Created by Jean-Baptiste Truffault in 2025.
 
 ## License
 
